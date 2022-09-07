@@ -3,19 +3,18 @@ package bronze4;
 import java.io.*;
 
 public class No_11945 {
-    public static void main (String args[]) throws IOException {
+    public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        String str1[] = br.readLine().split(" ");
-        int N = Integer.parseInt(str1[0]);
-        int M = Integer.parseInt(str1[1]);
-        for (int i = 0; i < N; i++)  {
-            String str = br.readLine();
-            for (int j = 0; j < M; j++) {
-                bw.write(str.charAt(M - j - 1));
+        String inputString[] = br.readLine().split(" ");
+        int testCase = Integer.parseInt(inputString[0]);
+
+        while (testCase-- > 0) {
+            String fishBread = br.readLine();
+            for (int i = fishBread.length()-1; i >= 0 ; i--){
+                System.out.print(fishBread.charAt(i));
             }
-            bw.write("\n");
+
+            System.out.println();
         }
-        bw.flush();
     }
 }
